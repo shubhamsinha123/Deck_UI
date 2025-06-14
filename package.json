@@ -1,0 +1,81 @@
+{
+  "name": "react-pagination",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000/",
+  "type": "module",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.6",
+    "@mui/lab": "^5.0.0-alpha.138",
+    "@mui/material": "^5.15.6",
+    "@mui/material-next": "^6.0.0-alpha.101",
+    "@mui/x-data-grid": "^6.11.0",
+    "@mui/x-data-grid-generator": "^6.11.0",
+    "@mui/x-date-pickers": "^6.11.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "ag-charts-react": "^9.0.1",
+    "axios": "^1.5.1",
+    "dayjs": "^1.11.9",
+    "emailjs-com": "^3.2.0",
+    "nth-check": "^2.1.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-content-loader": "^6.2.1",
+    "react-datepicker": "^4.16.0",
+    "react-dom": "^18.2.0",
+    "react-intl": "^6.4.7",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.14.2",
+    "styled-components": "^6.0.7",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint": "npx eslint --ext .jsx,.js src",
+    "lint:fix": "eslint --fix .",
+    "eject": "react-scripts eject",
+    "pretty": "prettier --config .prettierrc --write ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "overrides": {
+    "nth-check": "$nth-check"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.37.4",
+    "prettier": "3.4.2",
+    "react-scripts": "^5.0.1"
+  },
+  "_comments": [
+    "proxy: http://host.docker.internal:5000 (docker)",
+    "proxy: http://localhost:5000/ (localhost)",
+    "please publish the dcoker each time after local update"
+  ]
+}

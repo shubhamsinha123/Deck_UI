@@ -1,0 +1,72 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build and Test') {
+            steps {
+                script {
+                    // Ensure Node.js is installed
+                    bat 'node --version'
+                    bat 'npm --version'
+                }
+                // Install dependencies
+                bat 'npm install'
+                // Run linter
+                // bat 'npm run lint'
+            }
+        }
+        stage('Preety the project') {
+            steps {
+                script {
+                    // Ensure Node.js is installed
+                    bat 'node --version'
+                    bat 'npm --version'
+                }
+                // Install ESLint and Prettier
+                bat 'npm install prettier --save-dev'
+                // Run Prettier
+                bat 'npm run pretty'
+            }
+        }
+        stage('Lint the project') {
+            steps {
+                script {
+                    // Ensure Node.js is installed
+                    bat 'del /F /Q package-lock.json'
+                    bat 'rd /S /Q node_modules'
+                    bat 'npm install'
+                    bat 'node_modules/.bin/eslint --config .eslintrc.json --ext .js,.jsx src'
+                }
+                // Install ESLint
+                bat 'npm install eslint --save-dev'
+                // Run ESLint
+                bat 'npm run lint'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Archive the build artifacts
+            archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+            // Clean up workspace
+            cleanWs()
+        }
+        success {
+            // Send Slack notification on success
+            slackSend(
+                channel: '#jenkins-deck-digital',
+                color: '#00FF00',
+                message: "Build and Lint succeeded for ${env.JOB_NAME} - ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Closed>)"
+            )
+        }
+        unsuccessful {
+            // Send Slack notification on failure
+            slackSend(
+                channel: '#jenkins-deck-digital',
+                color: '#FF0000',
+                message: "Build and Lint failed for ${env.JOB_NAME} - ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+            )
+        }
+    }
+}

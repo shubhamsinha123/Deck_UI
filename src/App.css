@@ -1,0 +1,379 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.imageCard {
+  background: url('files/contemplative-reptile.jpg');
+}
+.newCard {
+  background: url('files/flight2.jpg');
+}
+.newCard2 {
+  background: url('files/flight.jpg');
+}
+.newCard3 {
+  background: url('files/miniature-airplane-travel-theme.jpg');
+}
+.userMain {
+  /* margin: 6% 15%; */
+  max-width: none !important;
+  /* width: 57pc; */
+  width: 45rem;
+  position: relative;
+  top: 7rem;
+  left: 10vw;
+  /* height: 20rem; */
+}
+.ticketDateStyle {
+  width: 18.8rem;
+}
+.UserProfile {
+  margin: 0 6rem;
+}
+.secondMain {
+  max-width: none !important;
+  /* width: 57pc; */
+  width: 25rem;
+  position: relative;
+  top: 0rem;
+  left: 15.5vw;
+}
+.adminLoginBtn {
+  margin: 15px;
+}
+.App-link {
+  color: #61dafb;
+}
+#editableCell {
+  display: block !important;
+}
+.buttonStyle {
+  margin: 1vw 2vw 1vw 44vw;
+}
+.buttonCancel {
+  margin-left: 1vw !important;
+}
+.dna-wrapper {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+.fallback {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+}
+.formMain {
+  display: flex;
+}
+.link {
+  text-decoration: none;
+  color: royalblue;
+}
+.countrySelect {
+  min-width: 20ch;
+}
+.textHeader {
+  background: linear-gradient(to bottom, #1294d273 0%, #171919 100%);
+  color: white;
+  text-align: center;
+  block-size: 1.875rem;
+  border-radius: 1.313rem;
+}
+.tableData {
+  /* margin-top: 16px; */
+  height: unset !important;
+  min-height: 370px !important;
+}
+
+.TopHeader {
+  position: relative;
+  left: 25%;
+  text-align: center;
+  text-decoration: none;
+}
+.tableHeader {
+  text-align: center !important;
+}
+.headerStyle {
+  color: black;
+  position: relative;
+  font-size: 21px;
+  text-align: center;
+  width: 22vw;
+}
+.common-header {
+  background-color: cadetblue;
+}
+.custom-header1 {
+  background-color: #d26812;
+}
+.custom-header2 {
+  background-color: white;
+}
+.custom-header3 {
+  background-color: #3cd212;
+}
+.custom-header-diff {
+  background-color: yellow;
+}
+.actions {
+  background-color: yellowgreen;
+  /* min-width: 12.75rem !important; */
+}
+.actions + div {
+  width: 0 !important;
+}
+.buttonAction {
+  background-color: aquamarine !important;
+}
+.MuiDataGrid-cell--editable,
+.onChange {
+  background-color: #e5e5e5 !important;
+}
+.MuiDataGrid-cell--editing {
+  background-color: white !important;
+  text-align: center;
+}
+.formCustom2 {
+  text-align: center;
+  background-size: cover;
+  padding: 10px 10px !important;
+  background-image: url('./files/tim-trad-AIwlyvpQJ18-unsplash.jpg');
+}
+.formPassBg {
+  text-align: center;
+  background-size: cover;
+  padding: 10px 10px !important;
+  background-image: url('./files/passBg.jpg');
+}
+
+.flex-idea {
+  padding: 10px 10px !important;
+}
+.profileMainDiv {
+  background-size: cover;
+  background-image: url('./files/tim-trad-AIwlyvpQJ18-unsplash.jpg');
+}
+.gapBtwnKeyVal {
+  margin-left: 0.5rem !important;
+  font-weight: bold !important;
+}
+.flexible {
+  display: flex !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.imgsrc {
+  background-size: cover;
+  background-image: url('./files/miniature-airplane-travel-theme.jpg');
+  width: 540px;
+}
+.chatImage {
+  background-image: url('./files/chat.png');
+  height: 4rem;
+  width: 4rem;
+  background-size: cover;
+  position: relative;
+  top: 11rem;
+  left: 14rem;
+}
+.marginUp {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ticket Data css */
+.nextSpaceGridUser {
+  padding-left: 12vw !important;
+}
+.listData {
+  width: 24vw !important;
+}
+.logo {
+  background: url('./files/logo.svg');
+}
+.ticketWindow {
+  background-color: #d9d9d9 !important;
+  /* box-shadow: 10px 10px 5px lightblue !important; */
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.7),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+.menuHeader {
+  margin-left: 45vw !important;
+  background-color: #171919 !important;
+}
+.buttonSpecial {
+  margin: 2em !important;
+}
+/* common button */
+.buttonLinkCustom {
+  /* margin-left: 2em; */
+  text-decoration: none;
+  color: #fff;
+}
+.buttonCustom {
+  position: relative;
+  left: 1em;
+}
+.layoutImg {
+  margin: 2vw 0;
+}
+.buttonCustomFlex {
+  bottom: 8vh;
+  left: 30vw;
+}
+.buttonCustomFlex2 {
+  bottom: 99px;
+  left: 39vw;
+}
+
+.buttonSpecial {
+  margin: 1vw 5vw !important;
+}
+
+/* new image card compo */
+.imageCardNew {
+  margin: 2vw 20vw;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.7),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.MyProfileCard {
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.7),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  margin: 2rem -2rem;
+  max-width: none !important;
+  width: 70rem;
+}
+.image-cardmedia {
+  object-fit: contain !important;
+  text-align: center;
+}
+.viewsIcon {
+  font-size: 15px !important;
+}
+.hello {
+  background-color: red;
+  margin-left: 12vw;
+}
+
+/* menu Bar */
+
+.menuBar {
+  background-image: linear-gradient(358deg, #4caf50, transparent);
+}
+.menuItem {
+  background-image: linear-gradient(358deg, #e9ec22, transparent);
+}
+
+/* Blog page */
+
+.blogPageMain {
+  /* height: 100%; */
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(105deg, #00ffc978, yellow);
+}
+
+.placeholder {
+  width: 600px !important;
+}
+/* ::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  overflow: visible;
+  background: red;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+} */
+
+/* ::-webkit-scrollbar:horizontal {
+  height: 8px;
+  width: 4px;
+  background-color: red;
+} */
+/* ::-webkit-scrollbar-thumb:horizontal {
+  background: #000;
+  border-radius: 10px;
+} */
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: gray;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f0640d;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #000;
+  border-radius: 10px;
+}
+
+/* Blog page button's */
+.buttonAlignment {
+  margin: 2vw 44vw !important;
+}
+[data-field='id'] {
+  width: 4vw !important;
+  min-width: 54px !important;
+}
+
+.mainCard {
+  /* width: 50%; */
+  text-align: center;
+  /* display: grid !important; */
+  /* margin-left: 40%; */
+}
+.cardShadow {
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.7),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+.gridSocial {
+  margin-top: -16px !important;
+  margin-left: -10px !important;
+}

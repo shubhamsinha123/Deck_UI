@@ -1,0 +1,48 @@
+{
+      field: "country",
+      headerName: "Country",
+      width: 130,
+      editable: true,
+      type: "singleSelect",
+      valueGetter: (params) => {
+        const selectedCountryCode = params.row.country;
+        const selectedCountry = countryList.find(
+          (country) => country.name === selectedCountryCode
+        );
+
+        return selectedCountry ? selectedCountry.name : "";
+      },
+      renderCell: (params) => (
+        <Select
+          name="country"
+          color="success"
+          style={{ width: 200 }}
+          value={params.row.country || ""}
+          onChange={(event) => handleInputChange(params.id, event.target.value)}
+        >
+          <MenuItem value="" disabled>
+            Select a country
+          </MenuItem>
+          {countryList.map((country) => (
+            <MenuItem key={country.name} value={country.name}>
+              {country.name}
+            </MenuItem>
+          ))}
+        </Select>
+      ),
+    },
+
+    // - pipe: atlassian/jenkins-job-trigger:0.5.0
+//   variables:
+//     JENKINS_URL: 'http://localhost:8080/job'
+//     JENKINS_USER: 'deckDigital1'
+//     JOB_NAME: 'Deck UI'
+//     WAIT: true
+//     WAIT_MAX_TIME: 120
+//     # JOB_PARAMETERS: '<json>' # Optional
+//     # BUILD_FROM_FILE: '<string>' # Optional
+//     # JENKINS_FILE_PATH: '<string>' # Optional
+//     # CERTIFICATE: '<string>' # Optional
+//     # WAIT: '<boolean>' # Optional
+//     # WAIT_MAX_TIME: '<integer>' # Optional
+//     # DEBUG: '<boolean>' # Optional
