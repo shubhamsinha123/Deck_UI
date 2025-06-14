@@ -223,7 +223,7 @@ export const TicketWindow = ({userData, setUserData}) => {
       }
 
       // Make a PATCH request to update the data on the server
-      const response = await axios.patch(`/updateData/${objectIdToUpdate}`, {
+      const response = await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/updateData/${objectIdToUpdate}`, {
         properties: selectedCities
       });
 

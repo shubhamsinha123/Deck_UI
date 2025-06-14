@@ -42,7 +42,7 @@ const ChatModal = ({open, setOpen, messages, setMessages, curUser, blogUser, api
         })
       };
       const payLoad = {chat: [...messages, newMessageObject]};
-      const url = `updateBlog/${blogUser}`;
+      const url = `${process.env.REACT_APP_API_BASE_URL}/updateBlog/${blogUser}`;
       // Call the PATCH API to add the new message
       try {
         const response = await axios.patch(url, payLoad);

@@ -125,7 +125,7 @@ const UserEntry = () => {
     const token = localStorage.getItem('token');
     if (data.length > 0) {
       try {
-        await axios.post('/postData', data, {
+        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/postData`, data, {
           headers: {
             Authorization: `Bearer ${token}`
           }

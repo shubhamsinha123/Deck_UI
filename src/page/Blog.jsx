@@ -230,7 +230,7 @@ export const Blog = () => {
    */
   async function fetchData() {
     try {
-      const response = await axios.get('/getBlog');
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/getBlog`);
       setBlogGetResp(response.data?.data);
     } catch (error) {
       console.error('Error fetching data:', error);

@@ -64,7 +64,7 @@ export const GeneratePass = () => {
         isPassword: true,
         password: password
       };
-      await axios.patch(`updateData/${userId}`, data).then(() => {
+      await axios.patch(`${process.env.REACT_APP_API_BASE_URL}/updateData/${userId}`, data).then(() => {
         setStatus({
           message: 'Password Updated Successfully',
           severity: 'success'
@@ -88,7 +88,7 @@ export const GeneratePass = () => {
       return;
     }
     try {
-      const response = await axios.get(`getData/${userId}`);
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/getData/${userId}`);
 
       if (response?.data?.data[0]?.password) {
         setStatus({

@@ -58,7 +58,7 @@ const BasicTextFields = () => {
         });
       } else {
         // Send POST request with newRow data
-        await axios.post('/adminPost', newRow);
+        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/adminPost`, newRow);
         setData((prevData) => [...prevData, newRow]);
         setStatus({
           message: 'Data Added Successfully',
@@ -89,7 +89,7 @@ const BasicTextFields = () => {
      */
     async function fetchData() {
       try {
-        const response = await axios.get('/adminGet');
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/adminGet`);
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);

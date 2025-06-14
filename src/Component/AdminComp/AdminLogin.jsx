@@ -50,7 +50,7 @@ const AdminLogin = ({setAdminLogin}) => {
 
   const handleUserSubmit = async () => {
     try {
-      const response = await axios.post('/adminJwtLogin', newRow);
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/adminJwtLogin`, newRow);
       const {token} = response.data;
       localStorage.setItem('tokenAdmin', token);
       setStatus({message: 'Logged In successfully', severity: 'success'});

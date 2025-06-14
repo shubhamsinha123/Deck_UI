@@ -108,7 +108,7 @@ const AdminWindow = () => {
     setDialogOpen(false);
     try {
       // Make the delete API call using the stored itemIdToDelete
-      const response = await axios.delete(`/removeData/${itemIdToDelete}`);
+      const response = await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/removeData/${itemIdToDelete}`);
 
       if (response.status === 202) {
         // Update your state to remove the deleted row

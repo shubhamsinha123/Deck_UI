@@ -84,7 +84,7 @@ const HomeAdminSignUp = ({setAuthenticated}) => {
         });
       } else {
         // Send POST request with newRow data
-        await axios.post('/adminPost', newRow);
+        await axios.post(`${process.env.REACT_APP_API_BASE_URL}/adminPost`, newRow);
         setData((prevData) => [...prevData, newRow]);
         setStatus({
           message: 'Data Added Successfully',
@@ -95,7 +95,7 @@ const HomeAdminSignUp = ({setAuthenticated}) => {
           MID,
           MPIN
         };
-        const authResponse = await axios.post('/adminJwtLogin', authReqBody);
+        const authResponse = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/adminJwtLogin`, authReqBody);
         localStorage.setItem('tokenAdmin', authResponse.data.token);
         setAuthenticated(true);
         setTimeout(() => {
@@ -127,7 +127,7 @@ const HomeAdminSignUp = ({setAuthenticated}) => {
      */
     async function fetchData() {
       try {
-        const response = await axios.get('/adminGet');
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/adminGet`);
         setData(response.data);
       } catch (error) {
         if (error?.response?.status === 403) {
