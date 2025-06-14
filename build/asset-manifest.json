@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fc6328fd.css",
+    "main.js": "/static/js/main.9b34f87a.js",
+    "static/js/206.b778dae4.chunk.js": "/static/js/206.b778dae4.chunk.js",
+    "static/media/tim-trad-AIwlyvpQJ18-unsplash.jpg": "/static/media/tim-trad-AIwlyvpQJ18-unsplash.effdeb7deb6a91e9cf36.jpg",
+    "static/media/window-view.jpg": "/static/media/window-view.7277258d2f5f9113ea5f.jpg",
+    "static/media/miniature-airplane-travel-theme.jpg": "/static/media/miniature-airplane-travel-theme.ca4dce3669a43936f740.jpg",
+    "static/media/flight2.jpg": "/static/media/flight2.4d07623c940337f579be.jpg",
+    "static/media/passBg.jpg": "/static/media/passBg.1c23ff5b4a47950d36cc.jpg",
+    "static/media/download.png": "/static/media/download.f1ce2d6db85b585dd52f.png",
+    "static/media/flight.jpg": "/static/media/flight.d9245f6f17a1d201b5e9.jpg",
+    "static/media/contemplative-reptile.jpg": "/static/media/contemplative-reptile.7ab4186592990b5e85bc.jpg",
+    "index.html": "/index.html",
+    "static/media/logo.svg": "/static/media/logo.55dd4053d4ba525fd2d1.svg"
+  },
+  "entrypoints": [
+    "static/css/main.fc6328fd.css",
+    "static/js/main.9b34f87a.js"
+  ]
+}
