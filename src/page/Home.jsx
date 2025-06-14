@@ -127,7 +127,7 @@ const HomeAdminSignUp = ({setAuthenticated}) => {
      */
     async function fetchData() {
       try {
-        const response = await axios.get('https://deck-api-g59h.onrender.com/adminGet');
+        const response = await axios.get('/adminGet');
         setData(response.data);
       } catch (error) {
         if (error?.response?.status === 403) {
