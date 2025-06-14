@@ -51,7 +51,7 @@ export const UserLogin = ({setAuthenticateded, setUserData}) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('/jwtUserLogin', newRow);
+      const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/jwtUserLogin`, newRow);
       const {token} = response.data;
       setUserData(response?.data?.userDetail);
       localStorage.setItem('token', token);
