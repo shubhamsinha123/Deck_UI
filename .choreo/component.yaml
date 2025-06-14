@@ -1,0 +1,12 @@
+name: react-app
+projectType: react
+componentType: web-application
+source:
+  type: git
+  repository: https://github.com/shubhamsinha123/Deck_UI.git
+  branch: master
+build:
+  command: npm install && npm run build
+run:
+  command: npx serve -s build
+  port: 3000
