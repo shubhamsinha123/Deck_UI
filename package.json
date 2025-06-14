@@ -2,7 +2,7 @@
   "name": "react-pagination",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
+  "proxy": "https://deck-api-g59h.onrender.com/",
   "type": "module",
   "dependencies": {
     "@emotion/react": "^11.11.1",
