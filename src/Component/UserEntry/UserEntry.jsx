@@ -58,7 +58,7 @@ const UserEntry = () => {
 
   useEffect(() => {
     axios
-      .get('/countryList')
+      .get(`${process.env.REACT_APP_API_BASE_URL}/countryList`)
       .then((response) => {
         setCountryData(response.data);
       })
