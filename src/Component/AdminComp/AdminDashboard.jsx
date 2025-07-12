@@ -60,7 +60,7 @@ const AdminWindow = () => {
    */
   const fetchData = () => {
     axios
-      .get('/getData', {
+      .get(`${process.env.REACT_APP_API_BASE_URL}/getData`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -149,7 +149,7 @@ const AdminWindow = () => {
     const userDate = formatDate(newRow.date);
     const approvedDate = formatDate(newRow.eDate);
     axios
-      .patch(`/updateData/${newRow.id}`, {
+      .patch(`${process.env.REACT_APP_API_BASE_URL}/updateData/${newRow.id}`, {
         date: userDate,
         eDate: approvedDate,
         visaStatus: newRow.visaStatus

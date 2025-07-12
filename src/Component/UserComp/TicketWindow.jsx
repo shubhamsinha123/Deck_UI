@@ -177,7 +177,7 @@ export const TicketWindow = ({userData, setUserData}) => {
   useEffect(() => {
     const fetchData = () => {
       axios
-        .get('/airportGet')
+        .get(`${process.env.REACT_APP_API_BASE_URL}/airportGet`)
         .then((response) => {
           setRows(response.data);
         })
@@ -191,7 +191,7 @@ export const TicketWindow = ({userData, setUserData}) => {
   useEffect(() => {
     const fetchPrice = () => {
       axios
-        .get('/priceGet')
+        .get(`${process.env.REACT_APP_API_BASE_URL}/priceGet`)
         .then((response) => {
           setPriceData(response.data);
         })
